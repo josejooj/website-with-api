@@ -57,9 +57,18 @@ async function start() {
 
         const spplited_data = data.toString().split("\n");
         let output = "";
-
+        let last_line = "";
+        
         for (const line of spplited_data) {
+
+            if (!line && last_line) {
+                last_line = line;
+                continue;
+            }
+
             output += `\n[\x1b[35m${source}\x1b[0m] ` + line
+            last_line = line;
+
         }
 
         process.stdout.write(output);
