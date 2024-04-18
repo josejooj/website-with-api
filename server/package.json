@@ -1,0 +1,17 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "MODE=development tsx watch ./main.ts",
+    "start": "MODE=production tsx ./main.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "hyper-express": "^6.15.2",
+    "tsx": "^4.7.2"
+  }
+}
